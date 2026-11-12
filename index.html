@@ -27,51 +27,126 @@ a{color:#1A1715}a:hover{color:#C94D08}
 .wa-cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:wa-shine 2.8s ease-in-out infinite}
 .wa-icon{animation:wa-shake 2.4s ease-in-out infinite;transform-origin:50% 50%}
 @media (prefers-reduced-motion: reduce){.wa-cta,.wa-cta::after,.wa-icon,.wa-btn,.wa-ring,.wa-ring2{animation:none}}
+
+html{scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+img,video{max-width:100%}
+section[id],footer[id],div[id]{scroll-margin-top:16px}
+.hd-toggle{display:none}
+@media (max-width: 900px){
+  .hero-h1{font-size:64px!important}
+  .h2-xl{font-size:38px!important}
+}
+@media (max-width: 768px){
+  .hd{padding:12px 16px!important;gap:10px!important;flex-wrap:wrap!important;position:relative}
+  .hd-logo{order:0;width:64px!important;height:64px!important;margin-right:auto}
+  .hd-logo span:first-child{font-size:17px!important}
+  .hd-logo span:last-child{font-size:7px!important}
+  .hd-right{display:contents!important}
+  .hd-cta{order:1;padding:10px 18px!important;font-size:14px!important}
+  .hd-toggle{order:2;display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0 11px;border:2px solid #1A1715;border-radius:12px;background:transparent;cursor:pointer}
+  .hd-toggle span{display:block;height:2px;background:#1A1715;border-radius:2px;transition:transform .2s,opacity .2s}
+  .hd.open .hd-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hd.open .hd-toggle span:nth-child(2){opacity:0}
+  .hd.open .hd-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .hd-nav,.hd-link{display:none!important;order:3}
+  .hd.open .hd-nav{display:flex!important;flex:1 1 100%!important;flex-direction:column;align-items:stretch!important;gap:0!important;border-top:1px solid #E6DCD0;margin-top:4px}
+  .hd.open .hd-link{display:block!important;flex:1 1 100%;order:4}
+  .hd.open .hd-nav a,.hd.open .hd-link{padding:14px 4px!important;border-bottom:1px solid #E6DCD0;font-size:17px!important;background:none!important;color:#1A1715!important;border-radius:0!important}
+  .main{padding:0 16px!important;gap:40px!important}
+  .hero{min-height:0!important;border-radius:20px!important}
+  .hero-ov{background:linear-gradient(0deg,rgba(20,18,16,.95) 0%,rgba(20,18,16,.75) 55%,rgba(20,18,16,.35) 100%)!important}
+  .hero-in{padding:120px 20px 28px!important;gap:28px!important}
+  .hero-in>div{gap:16px!important;max-width:100%!important}
+  .hero-h1{font-size:42px!important;line-height:1.02!important}
+  .hero-h1 span{padding:2px 10px 4px!important;margin-top:8px!important}
+  .hero-p{font-size:16px!important}
+  .hero-btns{width:100%;flex-direction:column}
+  .hero-btns a{justify-content:center;width:100%;text-align:center;font-size:17px!important;padding:15px 20px!important}
+  .hero-list{flex-direction:column;gap:10px!important;font-size:13px!important;padding-top:18px!important}
+  .h2-xl{font-size:32px!important;line-height:1.05!important}
+  .h2-md{font-size:28px!important}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .cards article>div{padding:12px 12px 14px!important;flex-direction:column;align-items:flex-start!important;gap:10px!important}
+  .cards article>div>div{flex:1 1 auto!important}
+  .cards h3{font-size:17px!important}
+  .cards p{font-size:13px!important}
+  .cards article a{width:40px!important;height:40px!important;align-self:flex-end}
+  .card-img{height:120px!important}
+  .feat{gap:20px 8px!important}
+  .feat li>span:first-child{width:60px!important;height:60px!important;border-radius:14px!important}
+  .feat svg{width:30px;height:30px}
+  .team{flex:1 1 100%!important;width:100%!important;height:auto!important;aspect-ratio:16/9;object-fit:cover}
+  .mom-img{flex:1 1 100%!important;height:220px!important;border-radius:18px!important}
+  .mom-card{flex:1 1 100%!important;padding:28px 20px!important;border-radius:18px!important}
+  .mom-card h3{font-size:24px!important}
+  .why{flex:1 1 100%!important;padding:22px 18px!important}
+  .phone{width:110px!important;margin:0 auto}
+  .loja-img{flex:1 1 100%!important;height:200px!important}
+  .loja-btns{gap:8px!important}
+  .loja-btns a{font-size:12px!important;padding:14px 4px!important}
+  .form-sec{padding:28px 18px!important;border-radius:20px!important;gap:28px!important;margin-bottom:40px!important}
+  .form-box{flex:1 1 100%!important;padding:20px 16px!important}
+  .form-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .form-grid input,.form-grid select,.form-grid textarea{font-size:16px!important}
+  .wa-cta-main{align-self:stretch!important;justify-content:center}
+  .ft{flex-direction:column;text-align:center;gap:20px!important;padding:32px 16px 96px!important}
+  .ft-p{padding-left:0!important;border-left:0!important}
+  .ft-nav{flex:1 1 auto!important;gap:10px 18px!important}
+  .ft-nav a{padding:4px 0}
+  .wa-float{right:16px!important;bottom:16px!important;transform:scale(.85);transform-origin:bottom right}
+}
+@media (max-width: 359px){
+  .hero-h1{font-size:36px!important}
+  .cards{grid-template-columns:1fr!important}
+  .card-img{height:150px!important}
+}
 </style>
 </head>
 <body>
 <div style="background: #FBF6F0; color: #1A1715; font-family: Inter, system-ui, sans-serif; min-height: 100vh">
 
 <!-- 01. MENU SUPERIOR -->
-<header style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px">
-  <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; flex: 1 1 360px">
+<header class="hd" id="topo" style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px">
+  <nav class="hd-nav" aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; flex: 1 1 360px">
     <a href="#" style="background: #C94D08; color: #FFFFFF; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.04em; padding: 11px 18px; border-radius: 4px">HOME</a>
     <a href="#cardapio" style="text-decoration: none; font-family: Oswald, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.04em">CARDÁPIO</a>
     <a href="#historia" style="text-decoration: none; font-family: Oswald, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.04em">NOSSA HISTÓRIA</a>
   </nav>
-  <a href="#" aria-label="Crust Pizza Co. — início" style="text-decoration: none; flex: 0 0 auto; width: 84px; height: 84px; border-radius: 50%; background: #141210; border: 3px solid #141210; box-shadow: inset 0 0 0 3px #FBF6F0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #FFFFFF">
+  <a class="hd-logo" href="#" aria-label="Crust Pizza Co. — início" style="text-decoration: none; flex: 0 0 auto; width: 84px; height: 84px; border-radius: 50%; background: #141210; border: 3px solid #141210; box-shadow: inset 0 0 0 3px #FBF6F0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #FFFFFF">
     <span style="font-family: Oswald, sans-serif; font-weight: 700; font-size: 25px; line-height: 1; letter-spacing: 0.01em">CRUST</span>
     <span style="font-family: Oswald, sans-serif; font-weight: 500; font-size: 9px; letter-spacing: 0.12em; margin-top: 3px">PIZZA CO.</span>
   </a>
-  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px 24px; flex: 1 1 360px">
-    <a href="#sobre" style="text-decoration: none; font-family: Oswald, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.04em">SOBRE</a>
-    <a href="#contato" style="text-decoration: none; font-family: Oswald, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.04em">CONTATO</a>
+  <button type="button" class="hd-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="topo"><span></span><span></span><span></span></button>
+  <div class="hd-right" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px 24px; flex: 1 1 360px">
+    <a class="hd-link" href="#sobre" style="text-decoration: none; font-family: Oswald, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.04em">SOBRE</a>
+    <a class="hd-link" href="#contato" style="text-decoration: none; font-family: Oswald, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.04em">CONTATO</a>
     
     
-    <a href="#pedir" style="background: #C94D08; color: #FFFFFF; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.04em; padding: 12px 26px; border-radius: 999px">PEÇA AGORA</a>
+    <a class="hd-cta" href="#pedir" style="background: #C94D08; color: #FFFFFF; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.04em; padding: 12px 26px; border-radius: 999px">PEÇA AGORA</a>
   </div>
 </header>
 
-<main style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 56px">
+<main class="main" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 56px">
 
   <!-- 02. HERO — vídeo em loop -->
-  <section aria-label="Destaque" style="position: relative; border-radius: 28px; overflow: hidden; background: #141210; min-height: 640px; display: flex; align-items: flex-end; box-shadow: 0 24px 60px rgba(60, 30, 10, 0.28)">
+  <section class="hero" aria-label="Destaque" style="position: relative; border-radius: 28px; overflow: hidden; background: #141210; min-height: 640px; display: flex; align-items: flex-end; box-shadow: 0 24px 60px rgba(60, 30, 10, 0.28)">
     <video autoplay="" muted="" loop="" playsinline="" preload="metadata" src="./assets/hero.mp4" poster="./assets/45e8f53ce037389f371535ac26c1ed49.webp" aria-label="Vídeo: mãos pegando fatias de uma pizza artesanal" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block"></video>
-    <div aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(20, 18, 16, 0.92) 0%, rgba(20, 18, 16, 0.7) 42%, rgba(20, 18, 16, 0.1) 75%), linear-gradient(0deg, rgba(20, 18, 16, 0.75) 0%, rgba(20, 18, 16, 0) 40%)"></div>
-    <div style="position: relative; z-index: 1; width: 100%; padding: 72px 56px 48px; display: flex; flex-direction: column; gap: 40px">
+    <div class="hero-ov" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(20, 18, 16, 0.92) 0%, rgba(20, 18, 16, 0.7) 42%, rgba(20, 18, 16, 0.1) 75%), linear-gradient(0deg, rgba(20, 18, 16, 0.75) 0%, rgba(20, 18, 16, 0) 40%)"></div>
+    <div class="hero-in" style="position: relative; z-index: 1; width: 100%; padding: 72px 56px 48px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 22px; max-width: 680px">
         <span style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #FFFFFF; font-family: Oswald, sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.14em; padding: 8px 16px; border-radius: 999px">
           <span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #EC6818; box-shadow: 0 0 0 4px rgba(236, 104, 24, 0.3)"></span>PIZZARIA ARTESANAL</span>
-        <h1 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 88px; line-height: 0.98; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.005em">Pizza de verdade<br>Feita do zero<br><span style="display: inline-block; background: #EC6818; color: #141210; padding: 2px 16px 6px; margin-top: 10px; transform: rotate(-1.5deg)">Feita para você</span></h1>
-        <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #F2ECE6; max-width: 520px">Massa artesanal, ingredientes selecionados e receitas preparadas com paixão em cada detalhe.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 14px; padding-top: 6px">
+        <h1 class="hero-h1" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 88px; line-height: 0.98; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.005em">Pizza de verdade<br>Feita do zero<br><span style="display: inline-block; background: #EC6818; color: #141210; padding: 2px 16px 6px; margin-top: 10px; transform: rotate(-1.5deg)">Feita para você</span></h1>
+        <p class="hero-p" style="margin: 0; font-size: 19px; line-height: 1.55; color: #F2ECE6; max-width: 520px">Massa artesanal, ingredientes selecionados e receitas preparadas com paixão em cada detalhe.</p>
+        <div class="hero-btns" style="display: flex; flex-wrap: wrap; gap: 14px; padding-top: 6px">
           <a href="#pedir" style="background: #C94D08; color: #FFFFFF; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 20px; letter-spacing: 0.04em; padding: 17px 34px; border-radius: 999px; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 10px 24px rgba(201, 77, 8, 0.45)">PEDIR ONLINE
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
           </a>
           <a href="#cardapio" style="color: #FFFFFF; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 20px; letter-spacing: 0.04em; padding: 15px 32px; border-radius: 999px; border: 2px solid #FFFFFF">VER CARDÁPIO</a>
         </div>
       </div>
-      <ul style="list-style: none; margin: 0; padding: 22px 0 0; border-top: 1px solid rgba(255, 255, 255, 0.22); display: flex; flex-wrap: wrap; gap: 12px 40px; color: #FFFFFF; font-family: Oswald, sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">
+      <ul class="hero-list" style="list-style: none; margin: 0; padding: 22px 0 0; border-top: 1px solid rgba(255, 255, 255, 0.22); display: flex; flex-wrap: wrap; gap: 12px 40px; color: #FFFFFF; font-family: Oswald, sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">
         <li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EC6818" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>MASSA DE FERMENTAÇÃO NATURAL</li>
         <li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EC6818" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>INGREDIENTES SELECIONADOS</li>
         <li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EC6818" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>FORNO NA TEMPERATURA IDEAL</li>
@@ -82,12 +157,12 @@ a{color:#1A1715}a:hover{color:#C94D08}
   <!-- 03. NOSSO CARDÁPIO -->
   <section id="cardapio" aria-labelledby="fav-title" style="display: flex; flex-direction: column; gap: 24px">
     <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 24px">
-      <h2 id="fav-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; text-transform: uppercase">Nossas favoritas</h2>
+      <h2 class="h2-xl" id="fav-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; text-transform: uppercase">Nossas favoritas</h2>
       <p style="margin: 0 0 6px; font-size: 16px; color: #3D3733">Conheça nossas pizzas e descubra seu próximo sabor favorito.</p>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
       <article style="background: #FFFFFF; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 20px rgba(60, 30, 10, 0.08); display: flex; flex-direction: column">
-        <img src="./assets/29dc3cad59b8fbd8ac47c72c6b4ec83e.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza de calabresa artesanal com cebola roxa" style="width: 100%; height: 160px; object-fit: cover; display: block">
+        <img class="card-img" src="./assets/29dc3cad59b8fbd8ac47c72c6b4ec83e.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza de calabresa artesanal com cebola roxa" style="width: 100%; height: 160px; object-fit: cover; display: block">
         <div style="padding: 18px 18px 20px 22px; display: flex; align-items: flex-end; gap: 12px; flex: 1">
           <div style="flex: 1">
             <h3 style="margin: 0 0 6px; font-family: Oswald, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.1; text-transform: uppercase">Calabresa artesanal</h3>
@@ -99,7 +174,7 @@ a{color:#1A1715}a:hover{color:#C94D08}
         </div>
       </article>
       <article style="background: #FFFFFF; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 20px rgba(60, 30, 10, 0.08); display: flex; flex-direction: column">
-        <img src="./assets/6a28e10891f57b0e9fe851c133f04f28.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza margherita com manjericão fresco" style="width: 100%; height: 160px; object-fit: cover; display: block">
+        <img class="card-img" src="./assets/6a28e10891f57b0e9fe851c133f04f28.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza margherita com manjericão fresco" style="width: 100%; height: 160px; object-fit: cover; display: block">
         <div style="padding: 18px 18px 20px 22px; display: flex; align-items: flex-end; gap: 12px; flex: 1">
           <div style="flex: 1">
             <h3 style="margin: 0 0 6px; font-family: Oswald, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.1; text-transform: uppercase">Margherita</h3>
@@ -111,7 +186,7 @@ a{color:#1A1715}a:hover{color:#C94D08}
         </div>
       </article>
       <article style="background: #FFFFFF; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 20px rgba(60, 30, 10, 0.08); display: flex; flex-direction: column">
-        <img src="./assets/999057828aa01b9f419089a171612520.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza de pepperoni" style="width: 100%; height: 160px; object-fit: cover; display: block">
+        <img class="card-img" src="./assets/999057828aa01b9f419089a171612520.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza de pepperoni" style="width: 100%; height: 160px; object-fit: cover; display: block">
         <div style="padding: 18px 18px 20px 22px; display: flex; align-items: flex-end; gap: 12px; flex: 1">
           <div style="flex: 1">
             <h3 style="margin: 0 0 6px; font-family: Oswald, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.1; text-transform: uppercase">Pepperoni</h3>
@@ -123,7 +198,7 @@ a{color:#1A1715}a:hover{color:#C94D08}
         </div>
       </article>
       <article style="background: #FFFFFF; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 20px rgba(60, 30, 10, 0.08); display: flex; flex-direction: column">
-        <img src="./assets/a2e06b7f28af831cfe1b61c505861edd.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza quatro queijos" style="width: 100%; height: 160px; object-fit: cover; display: block">
+        <img class="card-img" src="./assets/a2e06b7f28af831cfe1b61c505861edd.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza quatro queijos" style="width: 100%; height: 160px; object-fit: cover; display: block">
         <div style="padding: 18px 18px 20px 22px; display: flex; align-items: flex-end; gap: 12px; flex: 1">
           <div style="flex: 1">
             <h3 style="margin: 0 0 6px; font-family: Oswald, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.1; text-transform: uppercase">Quatro queijos</h3>
@@ -145,7 +220,7 @@ a{color:#1A1715}a:hover{color:#C94D08}
   <!-- 04. NOSSA TRADIÇÃO -->
   <section id="historia" aria-labelledby="trad-title" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px 48px">
     <div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 16px">
-      <h2 id="trad-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 46px; line-height: 1.02; text-transform: uppercase">O VERDADEIRO SABOR DA PIZZA ARTESANAL</h2>
+      <h2 class="h2-xl" id="trad-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 46px; line-height: 1.02; text-transform: uppercase">O VERDADEIRO SABOR DA PIZZA ARTESANAL</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3D3733">Acreditamos que uma grande pizza começa com ingredientes de qualidade, uma massa bem preparada e respeito à tradição.</p>
       <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3D3733">Receitas exclusivas, fermentação cuidadosa e sabor que conquista em cada pedaço.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
@@ -153,7 +228,7 @@ a{color:#1A1715}a:hover{color:#C94D08}
         <a href="#lojas" style="color: #1A1715; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.04em; padding: 12px 24px; border-radius: 999px; border: 2px solid #1A1715">ENCONTRE UMA UNIDADE</a>
       </div>
     </div>
-    <ul style="flex: 1 1 340px; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 16px">
+    <ul class="feat" style="flex: 1 1 340px; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 16px">
       <li style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
         <span style="width: 76px; height: 76px; border-radius: 16px; background: #EC6818; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 14px rgba(236, 104, 24, 0.3)">
           <svg aria-hidden="true" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5C9 3 15 3 21 6.5L12 21z"></path><path d="M4.5 9.2c5-2.6 10-2.6 15 0"></path><circle cx="10" cy="11.5" r="1.2"></circle><circle cx="14" cy="13.5" r="1.2"></circle><circle cx="12" cy="17" r="1"></circle></svg>
@@ -191,17 +266,17 @@ a{color:#1A1715}a:hover{color:#C94D08}
         <span style="font-family: Oswald, sans-serif; font-weight: 600; font-size: 13px; line-height: 1.25; text-transform: uppercase">Feito<br>com paixão</span>
       </li>
     </ul>
-    <img src="./assets/98fa505adaa7884f8988582dcad6e656.webp" loading="lazy" decoding="async" width="16" height="9" alt="Equipe da Crust Pizza Co. sorrindo, em fotos estilo polaroid" style="flex: 0 1 420px; width: 456px; border-radius: 16px; max-width: 100%; height: 254px; display: block">
+    <img class="team" src="./assets/98fa505adaa7884f8988582dcad6e656.webp" loading="lazy" decoding="async" width="16" height="9" alt="Equipe da Crust Pizza Co. sorrindo, em fotos estilo polaroid" style="flex: 0 1 420px; width: 456px; border-radius: 16px; max-width: 100%; height: 254px; display: block">
   </section>
 
   <hr style="margin: 0; border: 0; border-top: 1px solid #E6DCD0">
 
   <!-- 05. FORMAS DE APROVEITAR -->
   <section aria-labelledby="mom-title" style="display: flex; flex-direction: column; gap: 24px">
-    <h2 id="mom-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 40px; line-height: 1.05; text-transform: uppercase">BONS MOMENTOS PEDEM UMA CRUST</h2>
+    <h2 class="h2-xl" id="mom-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 40px; line-height: 1.05; text-transform: uppercase">BONS MOMENTOS PEDEM UMA CRUST</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 24px">
-      <img src="./assets/51b4ccc65b1eafebea27e4df03bd361e.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza de pepperoni com o selo Crust Pizza Co." style="flex: 1.5 1 380px; min-width: 0; height: 280px; object-fit: cover; border-radius: 22px; display: block; box-shadow: 0 10px 24px rgba(60, 30, 10, 0.14)">
-      <div style="flex: 1 1 260px; background: #1A1715; border-radius: 22px; padding: 32px 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px">
+      <img class="mom-img" src="./assets/51b4ccc65b1eafebea27e4df03bd361e.webp" loading="lazy" decoding="async" width="16" height="9" alt="Pizza de pepperoni com o selo Crust Pizza Co." style="flex: 1.5 1 380px; min-width: 0; height: 280px; object-fit: cover; border-radius: 22px; display: block; box-shadow: 0 10px 24px rgba(60, 30, 10, 0.14)">
+      <div class="mom-card" style="flex: 1 1 260px; background: #1A1715; border-radius: 22px; padding: 32px 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px">
         <span style="width: 56px; height: 56px; border-radius: 50%; background: #EC6818; display: flex; align-items: center; justify-content: center">
           <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0z"></path><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"></path><path d="M12 14v4M8 21h8M9 18h6"></path></svg>
         </span>
@@ -209,7 +284,7 @@ a{color:#1A1715}a:hover{color:#C94D08}
         <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #DDD4CB">Receitas artesanais preparadas para surpreender.</p>
         <a href="#" style="margin-top: 6px; background: #C94D08; color: #FFFFFF; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.04em; padding: 12px 36px; border-radius: 999px">SAIBA MAIS</a>
       </div>
-      <div style="flex: 1 1 260px; background: #1A1715; border-radius: 22px; padding: 32px 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px">
+      <div class="mom-card" style="flex: 1 1 260px; background: #1A1715; border-radius: 22px; padding: 32px 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px">
         <span style="width: 56px; height: 56px; border-radius: 50%; background: #EC6818; display: flex; align-items: center; justify-content: center">
           <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"></circle><circle cx="5.5" cy="9" r="2"></circle><circle cx="18.5" cy="9" r="2"></circle><path d="M7.5 19v-2a4.5 4.5 0 0 1 9 0v2"></path><path d="M2 18v-1a3.5 3.5 0 0 1 4-3.4M22 18v-1a3.5 3.5 0 0 0-4-3.4"></path></svg>
         </span>
@@ -224,13 +299,13 @@ a{color:#1A1715}a:hover{color:#C94D08}
       <div style="flex: 1 1 380px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding: 8px 4px">
         <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px">
           <a href="#" style="font-family: Oswald, sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1; text-decoration: none; color: #1A1715">@CRUSTPIZZACO</a>
-          <h2 style="margin: 0 0 6px; font-family: Oswald, sans-serif; font-weight: 700; font-size: 34px; line-height: 1.05; text-transform: uppercase">Vamos compartilhar uma fatia?</h2>
+          <h2 class="h2-md" style="margin: 0 0 6px; font-family: Oswald, sans-serif; font-weight: 700; font-size: 34px; line-height: 1.05; text-transform: uppercase">Vamos compartilhar uma fatia?</h2>
           <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3D3733">Marque a Crust nas suas fotos e faça parte da nossa comunidade de apaixonados por pizza.</p>
         </div>
-        <img src="./assets/4157a46756e324f359e3436b434222be.webp" loading="lazy" decoding="async" width="280" height="399" alt="" aria-hidden="true" style="width: 140px; height: auto; display: block; mix-blend-mode: multiply">
+        <img class="phone" src="./assets/4157a46756e324f359e3436b434222be.webp" loading="lazy" decoding="async" width="280" height="399" alt="" aria-hidden="true" style="width: 140px; height: auto; display: block; mix-blend-mode: multiply">
       </div>
-      <div style="flex: 1.4 1 480px; background: #FFFFFF; border-radius: 22px; padding: 26px 28px; box-shadow: 0 6px 20px rgba(60, 30, 10, 0.08); display: flex; flex-direction: column; gap: 18px">
-        <h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.05; text-transform: uppercase">Por que escolher a Crust?</h2>
+      <div class="why" style="flex: 1.4 1 480px; background: #FFFFFF; border-radius: 22px; padding: 26px 28px; box-shadow: 0 6px 20px rgba(60, 30, 10, 0.08); display: flex; flex-direction: column; gap: 18px">
+        <h2 class="h2-md" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.05; text-transform: uppercase">Por que escolher a Crust?</h2>
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px">
           <div style="flex: 1 1 260px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
             <img src="./assets/1ed4e1413292f7b41ea85df874c9838a.webp" loading="lazy" decoding="async" width="16" height="9" alt="Fatia de pizza com queijo derretendo" style="width: 100%; height: 66px; object-fit: cover; border-radius: 8px; display: block">
@@ -266,17 +341,17 @@ a{color:#1A1715}a:hover{color:#C94D08}
   <!-- 07. EXPANSÃO + 08. LOCALIZAÇÃO -->
   <section id="lojas" aria-label="Franquias e unidades" style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px; padding-bottom: 56px">
     <div style="flex: 1 1 280px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
-      <h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 34px; line-height: 1.05; text-transform: uppercase">Tenha sua própria Crust Pizza Co.</h2>
+      <h2 class="h2-md" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 34px; line-height: 1.05; text-transform: uppercase">Tenha sua própria Crust Pizza Co.</h2>
       <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3D3733">Transforme sua paixão por gastronomia em uma oportunidade de negócio.</p>
       <a href="#" style="margin-top: 8px; background: #C94D08; color: #FFFFFF; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.04em; padding: 12px 26px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px">SEJA UM FRANQUEADO
         <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
       </a>
     </div>
-    <img src="./assets/fd6be853c67056290d53c79f37dece54.webp" loading="lazy" decoding="async" width="16" height="9" alt="Fachada de uma unidade Crust Pizza Co. ao entardecer" style="flex: 1.1 1 340px; min-width: 0; height: 230px; object-fit: cover; border-radius: 18px; display: block; box-shadow: 0 10px 24px rgba(60, 30, 10, 0.14)">
+    <img class="loja-img" src="./assets/fd6be853c67056290d53c79f37dece54.webp" loading="lazy" decoding="async" width="16" height="9" alt="Fachada de uma unidade Crust Pizza Co. ao entardecer" style="flex: 1.1 1 340px; min-width: 0; height: 230px; object-fit: cover; border-radius: 18px; display: block; box-shadow: 0 10px 24px rgba(60, 30, 10, 0.14)">
     <div id="contato" style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 8px">
-      <h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 34px; line-height: 1.05; text-transform: uppercase">Encontre sua Crust favorita</h2>
+      <h2 class="h2-md" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 34px; line-height: 1.05; text-transform: uppercase">Encontre sua Crust favorita</h2>
       <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.5; color: #3D3733">Uma experiência artesanal esperando por você.</p>
-      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+      <div class="loja-btns" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
         <a href="#" style="background: #C94D08; color: #FFFFFF; text-decoration: none; border-radius: 14px; padding: 16px 8px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; font-family: Oswald, sans-serif; font-weight: 600; font-size: 13px; line-height: 1.2; letter-spacing: 0.03em">
           <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
           ENCONTRAR<br>UNIDADE
@@ -293,24 +368,24 @@ a{color:#1A1715}a:hover{color:#C94D08}
     </div>
   </section>
   <!-- 08b. FORMULÁRIO DE CONTATO -->
-  <section id="formulario" aria-labelledby="form-title" style="background: #1A1715; border-radius: 28px; padding: 48px; margin-bottom: 64px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: flex-start">
+  <section class="form-sec" id="formulario" aria-labelledby="form-title" style="background: #1A1715; border-radius: 28px; padding: 48px; margin-bottom: 64px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: flex-start">
     <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px; color: #FFFFFF">
       <span style="align-self: flex-start; background: #EC6818; color: #141210; font-family: Oswald, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; padding: 6px 14px; border-radius: 999px">FALE CONOSCO</span>
-      <h2 id="form-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 46px; line-height: 1.02; text-transform: uppercase">Bora conversar?</h2>
+      <h2 class="h2-xl" id="form-title" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 46px; line-height: 1.02; text-transform: uppercase">Bora conversar?</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DDD4CB; max-width: 420px">Pedidos para eventos, dúvidas, sugestões ou interesse em franquia: mande sua mensagem e a gente retorna rapidinho.</p>
-      <a href="https://wa.me/" class="wa-cta" style="align-self: flex-start; margin-top: 8px; display: inline-flex; align-items: center; gap: 12px; background: #25D366; color: #0B2E17; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.04em; padding: 14px 26px; border-radius: 999px">
+      <a href="https://wa.me/" class="wa-cta wa-cta-main" style="align-self: flex-start; margin-top: 8px; display: inline-flex; align-items: center; gap: 12px; background: #25D366; color: #0B2E17; text-decoration: none; font-family: Oswald, sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.04em; padding: 14px 26px; border-radius: 999px">
         <svg class="wa-icon" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.4z"></path><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1c-1-.5-2.4-1.9-2.9-2.9l1-1-1-2z"></path></svg>
         CHAMAR NO WHATSAPP
       </a>
     </div>
-    <div style="flex: 1.3 1 420px; background: #FBF6F0; border-radius: 20px; padding: 32px">
+    <div class="form-box" style="flex: 1.3 1 420px; background: #FBF6F0; border-radius: 20px; padding: 32px">
       <div id="form-ok" hidden role="status" style="min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center">
           <span style="width: 64px; height: 64px; border-radius: 50%; background: #EC6818; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
           <h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 700; font-size: 30px; text-transform: uppercase">Mensagem enviada</h3>
           <p style="margin: 0; font-size: 15px; color: #3D3733">Obrigado! Em breve a equipe Crust entra em contato.</p>
           <button type="button" id="form-reset" style="margin-top: 6px; min-height: 44px; padding: 10px 24px; border-radius: 999px; border: 2px solid #1A1715; background: transparent; font-family: Oswald, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.04em; cursor: pointer">ENVIAR OUTRA</button>
         </div>
-        <form id="form-contato" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px">
+        <form id="form-contato" class="form-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px">
           <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #1A1715; grid-column: 1 / -1">Nome
             <input class="crust-field" type="text" name="nome" required="" autocomplete="name" placeholder="Seu nome completo" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1.5px solid #D9CCBD; border-radius: 10px; background: #FFFFFF; font-family: Inter, sans-serif; font-size: 15px; color: #1A1715">
           </label>
@@ -339,13 +414,13 @@ a{color:#1A1715}a:hover{color:#C94D08}
 
 <!-- 09. RODAPÉ -->
 <footer id="sobre" style="background: #1A1715; color: #FFFFFF">
-  <div style="max-width: 1240px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px 36px">
+  <div class="ft" style="max-width: 1240px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px 36px">
     <div style="flex: 0 0 auto; width: 72px; height: 72px; border-radius: 50%; background: #141210; box-shadow: inset 0 0 0 2px #FFFFFF, inset 0 0 0 5px #141210, inset 0 0 0 6px #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center">
       <span style="font-family: Oswald, sans-serif; font-weight: 700; font-size: 21px; line-height: 1">CRUST</span>
       <span style="font-family: Oswald, sans-serif; font-weight: 500; font-size: 8px; letter-spacing: 0.12em; margin-top: 3px">PIZZA CO.</span>
     </div>
-    <p style="margin: 0; padding-left: 28px; border-left: 1px solid #4A443F; font-size: 14px; line-height: 1.55; color: #DDD4CB; flex: 0 0 auto">Pizza artesanal<br>Momentos especiais<br>Sabor de verdade</p>
-    <nav aria-label="Rodapé" style="flex: 1 1 420px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; font-size: 13px">
+    <p class="ft-p" style="margin: 0; padding-left: 28px; border-left: 1px solid #4A443F; font-size: 14px; line-height: 1.55; color: #DDD4CB; flex: 0 0 auto">Pizza artesanal<br>Momentos especiais<br>Sabor de verdade</p>
+    <nav class="ft-nav" aria-label="Rodapé" style="flex: 1 1 420px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; font-size: 13px">
       <a href="#cardapio" style="color: #F2ECE6; text-decoration: none">Cardápio</a>
       <a href="#historia" style="color: #F2ECE6; text-decoration: none">Nossa história</a>
       <a href="#lojas" style="color: #F2ECE6; text-decoration: none">Unidades</a>
@@ -354,12 +429,12 @@ a{color:#1A1715}a:hover{color:#C94D08}
       <a href="#" style="color: #F2ECE6; text-decoration: none">Privacidade</a>
       <a href="#" style="color: #F2ECE6; text-decoration: none">Termos de uso</a>
     </nav>
-    <p style="margin: 0; padding-left: 28px; border-left: 1px solid #4A443F; font-family: Oswald, sans-serif; font-weight: 600; font-size: 18px; line-height: 1.25; letter-spacing: 0.02em; flex: 0 0 auto">MADE WITH LOVE<br>SERVED WITH FLAVOR</p>
+    <p class="ft-p" style="margin: 0; padding-left: 28px; border-left: 1px solid #4A443F; font-family: Oswald, sans-serif; font-weight: 600; font-size: 18px; line-height: 1.25; letter-spacing: 0.02em; flex: 0 0 auto">MADE WITH LOVE<br>SERVED WITH FLAVOR</p>
   </div>
 </footer>
 
 <!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/" aria-label="Falar no WhatsApp" style="position: fixed; right: 28px; bottom: 28px; z-index: 50; width: 64px; height: 64px; display: block; text-decoration: none">
+<a class="wa-float" href="https://wa.me/" aria-label="Falar no WhatsApp" style="position: fixed; right: 28px; bottom: 28px; z-index: 50; width: 64px; height: 64px; display: block; text-decoration: none">
   <span aria-hidden="true" class="wa-ring" style="position: absolute; top: 0; left: 0; width: 64px; height: 64px; border-radius: 50%; background: #25D366"></span>
   <span aria-hidden="true" class="wa-ring2" style="position: absolute; top: 0; left: 0; width: 64px; height: 64px; border-radius: 50%; background: #25D366"></span>
   <span class="wa-btn" style="position: absolute; top: 0; left: 0; width: 64px; height: 64px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45)">
@@ -370,6 +445,9 @@ a{color:#1A1715}a:hover{color:#C94D08}
 </div>
 <style>#form-ok[hidden],#form-contato[hidden]{display:none!important}</style>
 <script>
+(function(){var hd=document.querySelector('.hd'),t=hd.querySelector('.hd-toggle');
+t.addEventListener('click',function(){var o=hd.classList.toggle('open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');});
+hd.addEventListener('click',function(e){if(e.target.closest('a')){hd.classList.remove('open');t.setAttribute('aria-expanded','false');}});})();
 (function(){var f=document.getElementById('form-contato'),ok=document.getElementById('form-ok');
 f.addEventListener('submit',function(e){e.preventDefault();f.hidden=true;ok.hidden=false;});
 document.getElementById('form-reset').addEventListener('click',function(){f.reset();ok.hidden=true;f.hidden=false;});})();
